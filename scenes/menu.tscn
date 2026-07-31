@@ -56,4 +56,85 @@ layout_mode = 2
 theme_override_font_sizes/font_size = 30
 text = "Sair"
 
+[node name="Criar_Usuario" type="VBoxContainer" parent="." unique_id=386075309]
+visible = false
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -51.5
+offset_top = -29.0
+offset_right = 51.5
+offset_bottom = 29.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 20
+
+[node name="Texto" type="Label" parent="Criar_Usuario" unique_id=1192962939]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+text = "Criar Usuário"
+horizontal_alignment = 1
+
+[node name="Nome_Input" type="LineEdit" parent="Criar_Usuario" unique_id=1048904576]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+placeholder_text = "Digite o seu Nome"
+alignment = 1
+
+[node name="Botoes" type="HBoxContainer" parent="Criar_Usuario" unique_id=538816922]
+layout_mode = 2
+theme_override_constants/separation = 23
+
+[node name="Criar" type="Button" parent="Criar_Usuario/Botoes" unique_id=404058960]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+text = "Criar"
+
+[node name="Voltar" type="Button" parent="Criar_Usuario/Botoes" unique_id=292243898]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+text = "Voltar"
+
+[node name="Creditos" type="Label" parent="." unique_id=1716596372]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -163.5
+offset_top = -37.5
+offset_right = 163.5
+offset_bottom = 101.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Créditos
+
+DanielS-dev pelo desenvolvimento do jogo"
+horizontal_alignment = 1
+
+[node name="Voltar" type="Button" parent="Creditos" unique_id=471092891]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -4.0
+offset_top = -8.0
+offset_right = 4.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "Voltar"
+
+[connection signal="pressed" from="Menu/Iniciar" to="." method="_on_iniciar_pressed"]
+[connection signal="pressed" from="Menu/Creditos" to="." method="_on_creditos_pressed"]
 [connection signal="pressed" from="Menu/Sair" to="." method="_on_sair_pressed"]
+[connection signal="pressed" from="Criar_Usuario/Botoes/Criar" to="." method="_on_criar_pressed"]
+[connection signal="pressed" from="Criar_Usuario/Botoes/Voltar" to="." method="_on_voltar_pressed"]
+[connection signal="pressed" from="Creditos/Voltar" to="." method="_on_voltar_creditos_pressed"]

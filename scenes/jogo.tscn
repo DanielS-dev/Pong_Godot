@@ -1,0 +1,68 @@
+[gd_scene format=3 uid="uid://3x0xswtgdmbt"]
+
+[ext_resource type="Texture2D" uid="uid://c5afs8currqxx" path="res://assets/background_black.png" id="1_1b3iq"]
+[ext_resource type="Texture2D" uid="uid://mnl8v4ata0qi" path="res://assets/quadrado.png" id="2_k05ng"]
+[ext_resource type="Texture2D" uid="uid://uy8x2iyxlind" path="res://assets/paredes.png" id="3_0c0ry"]
+
+[node name="Node2D" type="Control" unique_id=870050847]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Background" type="TextureRect" parent="." unique_id=1565693751]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_1b3iq")
+expand_mode = 1
+
+[node name="Jogador" type="Sprite2D" parent="." unique_id=1832610429]
+position = Vector2(25, 323)
+scale = Vector2(1, 2)
+texture = ExtResource("2_k05ng")
+
+[node name="Paredes" type="Sprite2D" parent="." unique_id=131227352]
+position = Vector2(576, 15)
+texture = ExtResource("3_0c0ry")
+
+[node name="Paredes2" type="Sprite2D" parent="." unique_id=1222014274]
+position = Vector2(576, 633)
+texture = ExtResource("3_0c0ry")
+
+[node name="Rede" type="Sprite2D" parent="." unique_id=1858302451]
+position = Vector2(576, 70)
+texture = ExtResource("2_k05ng")
+
+[node name="Rede2" type="Sprite2D" parent="." unique_id=1945611274]
+position = Vector2(576, 140)
+texture = ExtResource("2_k05ng")
+
+[node name="Rede3" type="Sprite2D" parent="." unique_id=1686020597]
+position = Vector2(576, 210)
+texture = ExtResource("2_k05ng")
+
+[node name="Rede4" type="Sprite2D" parent="." unique_id=508084213]
+position = Vector2(576, 280)
+texture = ExtResource("2_k05ng")
+
+[node name="Rede5" type="Sprite2D" parent="." unique_id=1448727167]
+position = Vector2(576, 350)
+texture = ExtResource("2_k05ng")
+
+[node name="Rede6" type="Sprite2D" parent="." unique_id=200217760]
+position = Vector2(576, 420)
+texture = ExtResource("2_k05ng")
+
+[node name="Rede7" type="Sprite2D" parent="." unique_id=963597387]
+position = Vector2(576, 490)
+texture = ExtResource("2_k05ng")
+
+[node name="Rede8" type="Sprite2D" parent="." unique_id=121063999]
+position = Vector2(576, 560)
+texture = ExtResource("2_k05ng")
