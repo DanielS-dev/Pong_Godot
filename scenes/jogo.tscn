@@ -1,8 +1,19 @@
 [gd_scene format=3 uid="uid://3x0xswtgdmbt"]
 
 [ext_resource type="Texture2D" uid="uid://c5afs8currqxx" path="res://assets/background_black.png" id="1_1b3iq"]
+[ext_resource type="Script" uid="uid://m0pj26idh61i" path="res://scripts/jogo.gd" id="1_k05ng"]
 [ext_resource type="Texture2D" uid="uid://mnl8v4ata0qi" path="res://assets/quadrado.png" id="2_k05ng"]
 [ext_resource type="Texture2D" uid="uid://uy8x2iyxlind" path="res://assets/paredes.png" id="3_0c0ry"]
+[ext_resource type="Script" uid="uid://cwcyrddnscblq" path="res://scripts/jogador.gd" id="4_0c0ry"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_t4yx7"]
+size = Vector2(1152, 30)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xorjq"]
+size = Vector2(50, 50)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_67oqy"]
+size = Vector2(1152, 30)
 
 [node name="Node2D" type="Control" unique_id=870050847]
 layout_mode = 3
@@ -11,6 +22,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_k05ng")
 
 [node name="Background" type="TextureRect" parent="." unique_id=1565693751]
 layout_mode = 1
@@ -22,18 +34,35 @@ grow_vertical = 2
 texture = ExtResource("1_1b3iq")
 expand_mode = 1
 
-[node name="Jogador" type="Sprite2D" parent="." unique_id=1832610429]
+[node name="StaticBody2D2" type="StaticBody2D" parent="." unique_id=660149792]
+position = Vector2(576, 15)
+
+[node name="Paredes" type="Sprite2D" parent="StaticBody2D2" unique_id=131227352]
+texture = ExtResource("3_0c0ry")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2" unique_id=1030215488]
+shape = SubResource("RectangleShape2D_t4yx7")
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=287821760]
 position = Vector2(25, 323)
 scale = Vector2(1, 2)
+script = ExtResource("4_0c0ry")
+
+[node name="Jogador" type="Sprite2D" parent="CharacterBody2D" unique_id=1832610429]
 texture = ExtResource("2_k05ng")
 
-[node name="Paredes" type="Sprite2D" parent="." unique_id=131227352]
-position = Vector2(576, 15)
-texture = ExtResource("3_0c0ry")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D" unique_id=1362951682]
+shape = SubResource("RectangleShape2D_xorjq")
 
-[node name="Paredes2" type="Sprite2D" parent="." unique_id=1222014274]
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=413519873]
+
+[node name="Paredes2" type="Sprite2D" parent="StaticBody2D" unique_id=1222014274]
 position = Vector2(576, 633)
 texture = ExtResource("3_0c0ry")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=2016796033]
+position = Vector2(576, 633)
+shape = SubResource("RectangleShape2D_67oqy")
 
 [node name="Rede" type="Sprite2D" parent="." unique_id=1858302451]
 position = Vector2(576, 70)
@@ -66,3 +95,11 @@ texture = ExtResource("2_k05ng")
 [node name="Rede8" type="Sprite2D" parent="." unique_id=121063999]
 position = Vector2(576, 560)
 texture = ExtResource("2_k05ng")
+
+[node name="Label" type="Label" parent="." unique_id=273923501]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 22
+text = "Jogador: "

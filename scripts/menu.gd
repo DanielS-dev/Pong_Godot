@@ -41,4 +41,5 @@ func _on_criar_pressed() -> void:
 		await get_tree().create_timer(1.0).timeout
 		erro.visible = false
 	else:
+		GerenciadorDados.nome_jogador = $Criar_Usuario/Nome_Input.text
 		get_tree().change_scene_to_file("res://scenes/jogo.tscn")
