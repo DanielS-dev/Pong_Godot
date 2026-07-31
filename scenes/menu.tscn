@@ -1,0 +1,59 @@
+[gd_scene format=3 uid="uid://6twh8nk8ipwt"]
+
+[ext_resource type="Script" uid="uid://miapfj34tfui" path="res://scripts/menu.gd" id="1_vjb58"]
+[ext_resource type="Texture2D" uid="uid://c5afs8currqxx" path="res://assets/background_black.png" id="2_con2f"]
+
+[node name="Control" type="Control" unique_id=1255291812]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_vjb58")
+
+[node name="Background" type="TextureRect" parent="." unique_id=2019915688]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_con2f")
+expand_mode = 1
+
+[node name="Menu" type="VBoxContainer" parent="." unique_id=1935648857]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Iniciar" type="Button" parent="Menu" unique_id=1850916101]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+text = "Iniciar"
+
+[node name="Placar" type="Button" parent="Menu" unique_id=839287768]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+text = "Placar"
+
+[node name="Creditos" type="Button" parent="Menu" unique_id=130313448]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+text = "Créditos"
+
+[node name="Sair" type="Button" parent="Menu" unique_id=1480498645]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+text = "Sair"
+
+[connection signal="pressed" from="Menu/Sair" to="." method="_on_sair_pressed"]
