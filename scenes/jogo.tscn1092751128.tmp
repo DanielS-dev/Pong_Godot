@@ -5,7 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://mnl8v4ata0qi" path="res://assets/quadrado.png" id="2_k05ng"]
 [ext_resource type="Texture2D" uid="uid://uy8x2iyxlind" path="res://assets/paredes.png" id="3_0c0ry"]
 [ext_resource type="Script" uid="uid://cwcyrddnscblq" path="res://scripts/jogador.gd" id="4_0c0ry"]
-[ext_resource type="Script" uid="uid://bfs0pbcx1t1i7" path="res://scripts/jogador_2.gd" id="6_ogo8m"]
+[ext_resource type="Script" uid="uid://bfs0pbcx1t1i7" path="res://scenes/jogador_2.gd" id="6_4sjka"]
 [ext_resource type="Script" uid="uid://bsqx3dumsdpd" path="res://scripts/bola.gd" id="7_ogo8m"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_t4yx7"]
@@ -66,7 +66,7 @@ shape = SubResource("RectangleShape2D_xorjq")
 [node name="Jogador2" type="CharacterBody2D" parent="." unique_id=1128920334]
 position = Vector2(1127, 323)
 scale = Vector2(1, 2)
-script = ExtResource("6_ogo8m")
+script = ExtResource("6_4sjka")
 
 [node name="Jogador" type="Sprite2D" parent="Jogador2" unique_id=365373148]
 texture = ExtResource("2_k05ng")
@@ -135,27 +135,3 @@ texture = ExtResource("2_k05ng")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Bola" unique_id=396521740]
 shape = SubResource("RectangleShape2D_8jk3k")
-
-[node name="Pontos1" type="Label" parent="." unique_id=1603403873]
-layout_mode = 0
-offset_left = 362.0
-offset_top = 1.0
-offset_right = 531.0
-offset_bottom = 29.0
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 20
-text = "
-"
-horizontal_alignment = 1
-
-[node name="Pontos2" type="Label" parent="." unique_id=1181326963]
-layout_mode = 0
-offset_left = 611.0
-offset_top = 3.0
-offset_right = 810.0
-offset_bottom = 31.0
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 20
-text = "
-"
-horizontal_alignment = 1
